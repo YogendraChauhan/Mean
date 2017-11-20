@@ -1,0 +1,21 @@
+{
+  "name": "wyfyspot",
+  "version": "1.0.0",
+  "description": "the simple mean application",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yogendra Chauhan",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "mongoose": "^4.13.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/YogendraChauhan/Mean.git"
+  }
+}
