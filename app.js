@@ -10,7 +10,7 @@ const route = require("./routes/routes");
 
 // connecton to mongodb
 
-mongoose.connect("mongodb://localhost:27017/users", {
+mongoose.connect("mongodb://localhost:27017/wyfyspot", {
     useMongoClient: true,
 });
 

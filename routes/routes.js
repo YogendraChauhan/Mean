@@ -13,7 +13,7 @@ router.post("/user", (req, res, next) => {
     // adding user logic here
 
     let user = new User({
-        f_name: req.body.first_name,
+        f_name: req.body.f_name,
         l_name: req.body.l_name,
         mobile: req.body.mobile
     });
