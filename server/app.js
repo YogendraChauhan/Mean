@@ -7,10 +7,10 @@ var path = require("path");
 
 var app = express();
 const route = require("./routes/routes");
-
+const uri = "mongodb://localhost:27017/wyfyspot";
 // connecton to mongodb
 
-mongoose.connect("mongodb://localhost:27017/wyfyspot", {
+mongoose.connect(uri, {
     useMongoClient: true,
 });
 
