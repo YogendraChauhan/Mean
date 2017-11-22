@@ -8,8 +8,14 @@ var path = require("path");
 var app = express();
 const route = require("./routes/routes");
 const uri = "mongodb://localhost:27017/wyfyspot";
-// connecton to mongodb
 
+// Native ES6 Promises
+//mongoose.Promise = global.Promise;
+
+// Bluebird Promises Library
+mongoose.Promise = require('bluebird');
+
+// connecton to mongodb
 mongoose.connect(uri, {
     useMongoClient: true,
 });
