@@ -31,7 +31,7 @@ git clone https://github.com/YogendraChauhan/Mean
 cd mean
 npm install  
 npm start  
-npm install -g nodemon
+npm install -g nodemon  
 nodemon
 
 If all the packages and modules installed successfully, your default web browser will open and you can see the default MEAN application at `http://localhost:3000`. This is the default port unless you change that manually.
