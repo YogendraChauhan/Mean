@@ -1,7 +1,7 @@
 {
   "name": "wyfyspot",
   "version": "1.0.0",
-  "description": "the simple mean application",
+  "description": "MEAN Stack 5 Application",
   "main": "server/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,5 +17,9 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/YogendraChauhan/Mean.git"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/YogendraChauhan/Mean/issues"
+  },
+  "homepage": "https://github.com/YogendraChauhan/Mean#readme"
 }
