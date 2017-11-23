@@ -8,10 +8,8 @@ var path = require("path");
 var app = express();
 const route = require("./routes/routes");
 
-//cloud 
-const uri = "mongodb://optimusprime:optimusprime@cluster0-shard-00-00-u961r.mongodb.net:27017,cluster0-shard-00-01-u961r.mongodb.net:27017,cluster0-shard-00-02-u961r.mongodb.net:27017/db-WyFyspot?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin";
 //local
-//const uri = "mongodb://localhost:27017/wyfyspot";
+const uri = "mongodb://localhost:27017/wyfyspot";
 
 // Native ES6 Promises
 //mongoose.Promise = global.Promise;
