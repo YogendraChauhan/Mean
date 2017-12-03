@@ -23,7 +23,6 @@ router.post("/register", (req, res, next) => {
             res.json({msg : "Failed to add user."});
         else
         {
-            res.status(200);
             res.json({
               token : user.generateJwt(),
               msg : "User added successfully."
@@ -33,7 +32,30 @@ router.post("/register", (req, res, next) => {
 });
 
 router.post("/login", (req, res, next) => {
-    
+    User.findOne({ email: req.body.email }, function (error, user) {
+        
+        if (error) { res.json({msg : "Unable to connect to the server"}); }
+        // Return if user not found in database
+        if (!user) {
+            res.json({msg : "User not found."});
+        }
+        // Return if password is wrong
+        if (!user.validatePassword(req.body.password)) {
+            res.json({msg : "Invalid Credentials."});
+        }
+
+        if(user)
+        {
+            res.json({
+              profile:{
+                name:user.name,
+                email:user.email
+              },
+              token : user.generateJwt(),
+              msg : "Login Successfully."
+            });
+        }
+    });
 });
 
 router.delete("/user/:id", (req, res, next) => {
