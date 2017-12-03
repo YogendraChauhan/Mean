@@ -9,21 +9,31 @@ router.get("/users", (req, res, next) => {
     });
 });
 
-router.post("/user", (req, res, next) => {
-    // adding user logic here
-
+router.post("/register", (req, res, next) => {
     let user = new User({
-        f_name: req.body.f_name,
-        l_name: req.body.l_name,
+        name: req.body.name,
+        email: req.body.email,
         mobile: req.body.mobile
     });
 
-    user.save((error, user)=>{
+    user.setPassword(req.body.password);
+    
+    user.save((error, user) => {
         if(error)
             res.json({msg : "Failed to add user."});
         else
-            res.json({msg : "User added successfully."});
+        {
+            res.status(200);
+            res.json({
+              token : user.generateJwt(),
+              msg : "User added successfully."
+            });
+        }
     });
+});
+
+router.post("/login", (req, res, next) => {
+    
 });
 
 router.delete("/user/:id", (req, res, next) => {

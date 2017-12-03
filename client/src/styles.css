@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+form.user-credentials
+{
+    width: 500px;
+    background: #ebebeb;
+    padding: 20px;
+    border: 1px solid #dedede;
+    margin: 20px auto;
+    display: block;
+}
